@@ -1,0 +1,21 @@
+<section class="container">
+  <h3 class="username">{{username}}'s closet</h3>
+  {{#if clothess.length}}
+  <h5>Current clothes:</h5>
+  <section class="flex-row justify-center">
+    {{#each clothess as |clothes|}}
+    <section class="card">
+    <a href="/clothes/{{clothes.id}}">
+    <header>{{clothes.type}}</header>
+
+    <div class="card-body">
+      <img src="/images/{{clothes.filename}}" alt="{{clothes.description}}">
+      <p>Brand: {{clothes.brand}}</p>
+      <p>Purchase Date: {{ format_date clothes.date_purchased}}</p>
+      <p>Description: {{clothes.description}}</p>
+    </div>
+    </a>
+    </section>
+    {{/each}}
+  </section>
+</section>
