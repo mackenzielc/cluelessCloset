@@ -37,17 +37,27 @@ router.get('/', async (req, res) => {
 //   }
 // })
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile/:id', withAuth, async (req, res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await User.findByPk(req.params.id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Clothes}],
+      include: [
+        { 
+          model: Clothes,
+          attributes: [
+            'id',
+            'type',
+            'brand',
+            'date_purchased',
+            'filename',
+            'description',
+          ]
+        }],
     });
 
     const user = userData.get({ plain: true });
-    res.render('profile', {
-      ...user,
-      loggedIn: true
+    res.render('profile', {user, 
+      loggedIn: req.session.loggedIn
     });
 
   } catch (err) {
@@ -71,8 +81,7 @@ router.get('/clothes/:id', withAuth, async (req, res) => {
   try {
     const clothesData = await Clothes.findByPk(req.params.id)
     const clothes = clothesData.get({ plain: true });
-    res.render('clothes', {
-      ...clothes,
+    res.render('clothes', { clothes,
       loggedIn: req.session.loggedIn 
     })
   } catch (err) {

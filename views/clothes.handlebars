@@ -1,8 +1,14 @@
-<section class="clothes">
-  <img src="/images/{{clothes.filename}}" alt="{{clothes.description}}">
-  <div class="clothes-details">
-    <h3>{{clothes.type}}</h3>
-    <p>Brand: {{clothing.brand}}</p>
-    <p>Purchase Date: {{ format_date clothes.date_purchased}}</p>
+<section class="clothes container">
+  <section class="flex-row justify-center">
+    <section class="card">
+      <img src="/images/{{clothes.filename}}" alt="{{clothes.description}}">
+      <div class="clothes-details">
+      <h3>{{clothes.type}}</h3>
+      <p>Brand: {{clothes.brand}}</p>
+      <p>Purchase Date: {{ format_date clothes.date_purchased}}</p>
+      <p>Description: {{ clothes.description }}</p>
+      <button class="delete-btn" data-id="{{clothes.id}}">Remove from closet!</button>
   </div>
+    </section>
+  </section>
 </section>

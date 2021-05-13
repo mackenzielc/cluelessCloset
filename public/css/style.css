@@ -1,7 +1,7 @@
 :root {
   --primary: #db81db;
-  --secondary: #5dad95;
-  --tertiary: #a9e9dc;
+  --secondary: #3243a8;
+  --tertiary: #6c7fd4;
   --quatrinary: #f5cefa;
   --light: #e3e4e3;
   --dark: #182c23;
@@ -20,7 +20,7 @@ body {
 }
 
 a {
-  color: var(--dark);
+  color: var(--light);
   text-decoration: none;
 }
 
@@ -36,29 +36,22 @@ header {
 }
 
 main {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   flex-grow: 1;
-}
-
-aside {
-  flex: 0;
-  background-color: var(--tertiary);
-  padding: 80px;
-  text-align: left;
-  color: var(--light);
 }
 
 nav {
   display: flex;
   background-color: var(--secondary);
+  color: var(--light)
 }
 
 nav a {
-  color: var(--light);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  color: var(--light)
 }
 
 nav a:hover {
@@ -116,15 +109,15 @@ img {
 }
 
 .login-card {
-  margin: 0 0 20px 0;
-  flex: 0 0 50%;
+  margin: 20px;
+  flex: 0 0 40%;
   max-width: 50%;
   padding: 5px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: var(--tertiary);
   color: var(--light);
 }
 
@@ -161,4 +154,9 @@ img {
   flex-flow: column wrap;
   align-content: flex-start;
   align-items: center;
+}
+
+.delete-btn {
+  margin: 5px;
+  background-color: var(--tertiary);
 }
