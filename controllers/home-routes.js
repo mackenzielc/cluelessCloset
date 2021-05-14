@@ -7,6 +7,10 @@ router.get('/', async (req, res) => {
   res.render('home', {loggedIn: req.session.logged_in})
 });
 
+router.get('/add', async (req, res) => {
+  res.render('add', {loggedIn: req.session.logged_in})
+});
+
 // Get one users closet
 // Add the custome middleware (withAuth) before allowing the user to access the closet
 // router.get('/user/:id', async (req, res) => {

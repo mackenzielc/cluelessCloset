@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 //create new clothing item
 //add back in Auth, after checking route
-router.post('/', async (req, res) => {
+router.post('/',async (req, res) => {
     try {
         const newItem = await Clothes.create({
             type: req.body.type,
@@ -13,7 +13,8 @@ router.post('/', async (req, res) => {
             description: req.body.description,
             filename: req.body.filename,
             //must change the below to req.session.user_id
-            user_id: req.body.user_id,
+            //updated it from req.body.user_id to req.session.user_id
+            user_id: req.session.user_id,
         });
 
         res.status(200).json(newItem);
