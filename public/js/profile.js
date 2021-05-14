@@ -1,4 +1,4 @@
-console.log("connected")
+// console.log("connected")
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -7,7 +7,7 @@ const newFormHandler = async (event) => {
     const date_purchased = document.querySelector('#date-purchased').value.trim();
     const description = document.querySelector('#description').value;
     const filename = document.querySelector('#filename').value.trim();
-    console.log("clicked",date_purchased, description, filename)
+    //console.log("clicked",date_purchased, description, filename)
 
     if (type && brand && date_purchased && description && filename) {
         const response = await fetch(`/api/clothes`, {
