@@ -61,6 +61,7 @@ Add new item:
 ![Add clothing view](/public/images/add-view.png)
 
 ## Deployed link
+https://fast-taiga-35906.herokuapp.com/ 
 
 ## Key Focus of Project
 
