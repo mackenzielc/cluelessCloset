@@ -1,3 +1,4 @@
+console.log("connected")
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -6,6 +7,7 @@ const newFormHandler = async (event) => {
     const date_purchased = document.querySelector('#date-purchased').value.trim();
     const description = document.querySelector('#description').value;
     const filename = document.querySelector('#filename').value.trim();
+    console.log("clicked",date_purchased, description, filename)
 
     if (type && brand && date_purchased && description && filename) {
         const response = await fetch(`/api/clothes`, {
@@ -15,6 +17,8 @@ const newFormHandler = async (event) => {
                 'Content-Type': 'application/json',
             },
         });
+
+        console.log(response)
 
         if(response.ok) {
             document.location.replace('/profile');
