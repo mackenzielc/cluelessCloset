@@ -30,7 +30,7 @@ THEN I aam signed out of the site
 Follow the below steps to use the app:
 1. Clone the repo into a local directory
 2. Open a terminal in the correct directory and run 
-````
+```
 npm install
 ```
 3. Create a MySQL database using MySQL Workbench and run the schema in the db folder
