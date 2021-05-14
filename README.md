@@ -1,12 +1,15 @@
 ## Description
 Virtual closet application that lets you create a user profile and keep track of the items in your closet. Inspired by the movie Clueless!
 
-## Requirements
-As a person interested in fashion
-I want a site to keep track of my clothes
-So that I don't have to dig through my closet to figure out what I own and always have my clothing inventory at my fingertips
+## User Story
+```md
+AS a person interested in fashion
+I WANT a site to keep track of my clothes
+SO THAT I don't have to dig through my closet to figure out what I own and always have my clothing inventory at my fingertips
+```
 
 ## Acceptance Criteria
+```md
 GIVEN a closet inventory site
 WHEN I visit the site for the first time
 THEN I am presented with the homepage, which explains the mission and vision for the site
@@ -25,6 +28,7 @@ WHEN I click on the delete button
 THEN I am taken back to my profile and the item is removed from my closet
 WHEN I click on the logout option in the navigation
 THEN I aam signed out of the site
+```
 
 ## Installation
 Follow the below steps to use the app:
@@ -46,10 +50,37 @@ npm start
 ```
 
 ## Mock-up
+A user profile:
 ![Profile view](/public/images/profile-view.png)
+Clothing detail:
 ![Clothes detail view](/public/images/detail-view.png)
+Add new item"
 ![Add clothing view](/public/images/add-view.png)
 Video of functionality: 
 https://drive.google.com/file/d/17vae-jWNKdTYm8O0F1-65R2WZBe9bHYW/view 
 
 ## Deployed link
+
+## Key Focus of Project
+
+* [Model-View-Controller](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
+
+* [Sequelize model](https://sequelize.org/master/class/lib/model.js~Model.html)
+
+* [Handlebars.js](https://www.npmjs.com/package/express-handlebars)
+
+  * [Expressions](https://handlebarsjs.com/guide/expressions.html)
+
+  * [Built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html)
+
+  * [Custom helpers](https://www.npmjs.com/package/express-handlebars#helpers)
+
+* Sessions and Cookies
+
+  * [express-session](https://www.npmjs.com/package/express-session)
+
+  * [connect-session-store using Sequelize](https://www.npmjs.com/package/connect-session-sequelize) 
+
+  * [Express.js session cookie](https://github.com/expressjs/session#cookie)
+
+* [Express.js middleware](https://expressjs.com/en/guide/using-middleware.html)
