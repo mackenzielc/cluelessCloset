@@ -41,9 +41,9 @@ router.get('/add', async (req, res) => {
 //   }
 // })
 
-router.get('/profile/:id', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
-    const userData = await User.findByPk(req.params.id, {
+    const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [
         { 
@@ -60,8 +60,8 @@ router.get('/profile/:id', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    res.render('profile', {user, 
-      loggedIn: req.session.loggedIn
+    res.render('profile', { ...user, 
+      loggedIn: true
     });
 
   } catch (err) {

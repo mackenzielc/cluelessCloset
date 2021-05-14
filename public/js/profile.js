@@ -8,7 +8,7 @@ const newFormHandler = async (event) => {
     const filename = document.querySelector('#filename').value.trim();
 
     if (type && brand && date_purchased && description && filename) {
-        const response = await fetch('/api/clothes', {
+        const response = await fetch(`/api/clothes`, {
             method: 'POST',
             body: JSON.stringify({ type, brand, date_purchased, description, filename }),
             headers: {

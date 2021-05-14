@@ -4,14 +4,15 @@ const withAuth = require('../../utils/auth');
 
 //create new clothing item
 //add back in Auth, after checking route
-router.post('/',async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const newItem = await Clothes.create({
-            type: req.body.type,
-            brand: req.body.brand,
-            date_purchased: req.body.date_purchased,
-            description: req.body.description,
-            filename: req.body.filename,
+            ...req.body,
+            // type: req.body.type,
+            // brand: req.body.brand,
+            // date_purchased: req.body.date_purchased,
+            // description: req.body.description,
+            // filename: req.body.filename,
             //must change the below to req.session.user_id
             //updated it from req.body.user_id to req.session.user_id
             user_id: req.session.user_id,
