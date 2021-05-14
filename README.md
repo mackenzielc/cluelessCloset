@@ -50,14 +50,15 @@ npm start
 ```
 
 ## Mock-up
+Video of functionality: 
+https://drive.google.com/file/d/17vae-jWNKdTYm8O0F1-65R2WZBe9bHYW/view 
+
 A user profile:
 ![Profile view](/public/images/profile-view.png)
 Clothing detail:
 ![Clothes detail view](/public/images/detail-view.png)
-Add new item"
+Add new item:
 ![Add clothing view](/public/images/add-view.png)
-Video of functionality: 
-https://drive.google.com/file/d/17vae-jWNKdTYm8O0F1-65R2WZBe9bHYW/view 
 
 ## Deployed link
 
@@ -69,18 +70,16 @@ https://drive.google.com/file/d/17vae-jWNKdTYm8O0F1-65R2WZBe9bHYW/view
 
 * [Handlebars.js](https://www.npmjs.com/package/express-handlebars)
 
-  * [Expressions](https://handlebarsjs.com/guide/expressions.html)
+* [Expressions](https://handlebarsjs.com/guide/expressions.html)
 
-  * [Built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html)
+* [Built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html)
 
-  * [Custom helpers](https://www.npmjs.com/package/express-handlebars#helpers)
+* [Custom helpers](https://www.npmjs.com/package/express-handlebars#helpers)
 
-* Sessions and Cookies
+* [express-session](https://www.npmjs.com/package/express-session)
 
-  * [express-session](https://www.npmjs.com/package/express-session)
+* [connect-session-store using Sequelize](https://www.npmjs.com/package/connect-session-sequelize) 
 
-  * [connect-session-store using Sequelize](https://www.npmjs.com/package/connect-session-sequelize) 
-
-  * [Express.js session cookie](https://github.com/expressjs/session#cookie)
+* [Express.js session cookie](https://github.com/expressjs/session#cookie)
 
 * [Express.js middleware](https://expressjs.com/en/guide/using-middleware.html)
